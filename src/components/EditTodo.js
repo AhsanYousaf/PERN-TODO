@@ -8,7 +8,10 @@ function EditTodo({todo}) {
   const editDescription = async (e) => {
     e.preventDefault();
     try {
-        axios.put(`http://localhost:5000/todos/${todo.todo_id}`,{
+        //proxy
+        //https://pern-todo-app
+
+        axios.put(`/todos/${todo.todo_id}`,{
             description
         }).then(()=>{});
     } catch (err) {

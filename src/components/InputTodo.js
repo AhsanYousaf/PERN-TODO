@@ -9,7 +9,7 @@ function InputTodo() {
     e.preventDefault();
     try {
         //const body = description;
-        axios.post("http://localhost:5000/todos",{
+        axios.post("/todos",{
             description
         }).then((response)=>{
   

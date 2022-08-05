@@ -6,7 +6,7 @@ function ListTodos() {
 
   const [todoList,setTodoList] = useState([]);
   const getTodos = async () => {
-    axios.get("http://localhost:5000/todos").then((response)=>{
+    axios.get("/todos").then((response)=>{
         setTodoList(response.data);
         //console.log(todoList);
     })
@@ -17,7 +17,7 @@ function ListTodos() {
 
   const deleteTodo = async (id) => {
     try {
-        axios.delete(`http://localhost:5000/todos/${id}`).then((response)=>{});
+        axios.delete(`/todos/${id}`).then((response)=>{});
     } catch (err) {
         console.error(err.message);
     }
